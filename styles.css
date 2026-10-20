@@ -115,7 +115,7 @@ section{padding:84px 0}
 .res li{font-size:14px;color:var(--muted);padding-left:22px;position:relative}
 .res li::before{content:"";position:absolute;left:3px;top:9px;width:8px;height:8px;border-radius:50%;background:var(--gold)}
 
-.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center}
 .about__emb{aspect-ratio:1;border-radius:28px;background:radial-gradient(circle at 30% 25%,var(--tint),transparent 55%),linear-gradient(145deg,#e4eeec,#f4ecdb);border:1px solid var(--line);display:grid;place-items:center;max-width:340px}
 .about__emb svg{width:62%}
 
@@ -164,6 +164,17 @@ section{padding:84px 0}
 .doc p,.doc li{color:var(--muted);margin-bottom:10px}
 .doc ul{padding-left:20px}
 
+.logo img{width:auto;height:32px;flex-shrink:0}
+.hero__sub p+p,.lead p+p,.note p+p,.adv p+p,.step p+p,.faq__item p+p,.idea__q p+p,.offer__side p+p,.muted-p p+p{margin-top:12px}
+.hero__sub p,.lead p{font:inherit;color:inherit}
+.faq__item p:not(:last-child){padding-bottom:0}
+.faq__item p+p{margin-top:12px}
+.idea__q p{font:inherit;color:inherit}
+.about__photo{border-radius:28px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--sh);max-width:360px;justify-self:end;background:var(--bg2)}
+.about__photo img{width:100%;height:auto;aspect-ratio:900/1125;object-fit:cover}
+.muted-p{font-size:16px}
+#guide{padding-top:0}
+.case h3{font-size:19px}
 @media (max-width:1180px){.nav{gap:18px}.nav a{font-size:13.5px}}
 @media (max-width:1100px){
   .nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--bg);flex-direction:column;gap:0;padding:8px 20px 20px;border-bottom:1px solid var(--line)}
@@ -180,7 +191,7 @@ section{padding:84px 0}
   .grid--4{grid-template-columns:repeat(2,1fr)}
   .idea,.magnet{padding:30px}
   .offer__main,.offer__side{padding:30px}
-  .about__emb{max-width:280px}
+  .about__photo{justify-self:start;max-width:320px}
 }
 @media (max-width:560px){
   .grid--4{grid-template-columns:1fr}
@@ -193,3 +204,16 @@ section{padding:84px 0}
   .btn{white-space:normal;text-align:center}
 }
 @media (max-width:380px){.logo span.nm{display:none}}
+
+@media (max-width:420px){
+  .container{width:min(1160px,100% - 32px)}
+  h1{font-size:30px}
+  .shift__row{grid-template-columns:1fr;gap:4px}
+  .shift__row i{transform:rotate(90deg);justify-self:start;padding-left:12px}
+  .offer__side .row{flex-wrap:wrap}
+  .offer__side .row b{white-space:normal}
+  .offer__main .price small{display:block;margin-top:4px}
+  .hero__cta .btn,.contact-card .btn{width:100%}
+  .nav{padding-left:16px;padding-right:16px}
+}
+body{overflow-x:hidden}
